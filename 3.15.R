@@ -84,7 +84,8 @@ ks.test(x,p)
 # p-value is small enough so that we can reject the null hypothesis, the given 
 # dataset is drawn from the pdf.
 
-# 4. 
+# 4.
+
 
 
 
