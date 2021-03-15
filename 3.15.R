@@ -45,7 +45,17 @@ binconf(s1,length(x),method="wilson",alpha)
 
 old <- read.csv("geysers.csv")
 
+# mean & standard error
+m <- mean(old$waiting)
+se <- sqrt(var(old$waiting)/length(old$waiting))
 
+# 90% CI
+L <- m-1.645*se
+U <- m+1.645*se
+
+# estimate the median waiting time
+F_old <- ecdf(old$waiting)
+quantile(F_old,0.5)
 
 
 ## 3. KS problem
@@ -85,7 +95,7 @@ ks.test(x,p)
 # dataset is drawn from the pdf.
 
 # 4.
-
+# See pdf 3.15-hw-Q4.
 
 
 
